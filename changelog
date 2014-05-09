@@ -1,0 +1,5 @@
+1. 2014.4.x 提交初始版本
+2. 2014.5.9 此前版本sendGetTableRequest有bug，如果oid格式为xxxxxx.a.N，如果a不是自增数字序列，
+则无法正常解析，例如ipAddrTable，oid是xxxxxx.ip地址.N的形式，这时，无法实现对snmp返回的table
+数据的正常解析，这个版本中解决了这个问题，将a看作一个整体，而不再是自增的数字序列，这样组织出
+来的表格型数据，适用于snmp中的各种表格型数据
